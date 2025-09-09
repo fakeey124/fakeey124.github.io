@@ -86,7 +86,6 @@
   </style>
 </head>
 <body>
-  <
   <div class="card">
     <h2>Вход</h2>
 
@@ -106,55 +105,6 @@
     </div>
   </div>
 
-<script>
-document.getElementById('send-login').addEventListener('click', async () => {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  document.getElementById('login-msg').textContent = 'Отправка...';
-
-  try {
-    const res = await fetch('/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
-    const j = await res.json();
-    if (res.ok) {
-      document.getElementById('login-block').classList.add('hidden');
-      document.getElementById('otp-block').classList.remove('hidden');
-      document.getElementById('sent-email').textContent = email;
-      document.getElementById('login-msg').textContent = '';
-    } else {
-      document.getElementById('login-msg').textContent = j.error || 'Ошибка';
-    }
-  } catch (e) {
-    document.getElementById('login-msg').textContent = 'Ошибка сети';
-  }
-});
-
-document.getElementById('verify-otp').addEventListener('click', async () => {
-  const email = document.getElementById('email').value;
-  const code = document.getElementById('otp').value;
-  document.getElementById('verify-msg').textContent = 'Проверка...';
-  try {
-    const res = await fetch('/verify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, code })
-    });
-    const j = await res.json();
-    if (res.ok) {
-      document.getElementById('verify-msg').style.color = '#2a9d8f';
-      document.getElementById('verify-msg').textContent = 'Успешно! 🎉';
-      // Здесь можно сделать редирект в мессенджер
-    } else {
-      document.getElementById('verify-msg').style.color = '#e63946';
-      document.getElementById('verify-msg').textContent = j.error || 'Неверный код';
-    }
-  } catch (e) {
-    document.getElementById('verify-msg').textContent = 'Ошибка сети';
-  }
-});
-</script>
+<script src="reg.js">
 </body>
 </html>
