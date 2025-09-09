@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Fakeey | Login</title>
+  <style>
+    /* Общий стиль */
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f4f6f8;
+      margin: 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 12px;
+      background: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #005fcc;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      margin: 12px 0 0;
+    }
+
+    .hidden { display: none; }
+
+    .msg {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #e63946;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .404 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="input">404 Error.</h1>
+  <h2 id="input">Not found.</h2>
+
+</body>
+</html>
