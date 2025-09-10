@@ -20,7 +20,7 @@
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       width: 100%;
-      max-width: 360px;
+      max-width: 380px;
       text-align: center;
       animation: fadeIn 0.3s ease;
     }
@@ -92,12 +92,27 @@
 <body>
   <img src="https://cdn.iconscout.com/icon/free/png-256/free-chat-icon-svg-png-download-2598238.png" height="30px">
   <h1>Fakeey</h1>
-  <h3 id="reg">Registration</h3>
   <br>
-  <h1>404 Error</h1>
-  <h2>Not found.</h2>
-  <a href="https://fakeey.github.io/">Go to the main page</a>
+  <h3 class="reg">Registration</h3>
+  <br>
+  <div class="card">
+    <div id="login-block">
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Пароль" />
+      <button id="send-login">Continue</button>
+      <p id="login-msg" class="msg"></p>
+      <br>
+      <a href="https://fakeey124.github.io/login">I already have an account!</a>
+    </div>
 
-<script src="reg.js">
+    <div id="otp-block" class="hidden">
+      <p>Code sended on <span id="sent-email" style="font-weight:500;"></span></p>
+      <input id="otp" type="text" placeholder="Код из письма" />
+      <button id="verify-otp">Подтвердить</button>
+      <p id="verify-msg" class="msg"></p>
+    </div>
+  </div>
+
+<script src="reg.js"></script>
 </body>
 </html>
