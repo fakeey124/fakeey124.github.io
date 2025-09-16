@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fakeey | Register</title>
-    <style>
-    body {
-      font-family: "Inter", Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #393939;
-      margin: 0;
-    }
-    </style>
+    <title>Fakeey | Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="https://cdn.iconscout.com/icon/free/png-256/free-chat-icon-svg-png-download-2598238.png" height="50px">
-  <h1>Fakeey</h1>
-  <br>
-  <p></p>
-  <h3 class="reg">Registration</h3>
-  <div
+    <div class="header">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-chat-icon-svg-png-download-2598238.png" height="30px" alt="Logo">
+        <h1 class="logo-text">Fakeey</h1>
+    </div>
     
+    <main class="container">
+        <h3 class="reg-title">Registration</h3>
+        <div class="card">
+            <div id="login-block">
+                <input id="email" type="email" placeholder="Email" />
+                <input id="password" type="password" placeholder="Password" />
+                <button id="send-login">Continue</button>
+                <p id="login-msg" class="msg"></p>
+                <br>
+                <a href="https://fakeey124.github.io/login">I already have an account!</a>
+            </div>
+            
+            <div id="otp-block" class="hidden">
+                <p>Code sent to <span id="sent-email" class="highlight"></span></p>
+                <input id="otp" type="text" placeholder="Code from email" />
+                <button id="verify-otp">Confirm</button>
+                <p id="verify-msg" class="msg"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="reg.js"></script>
 </body>
 </html>

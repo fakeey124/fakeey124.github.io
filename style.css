@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #F7F7F7;
+    --card-bg: #FFFFFF;
+    --text-color: #333333;
+    --input-border: #E5E5E5;
+    --placeholder-color: #AAAAAA;
+    --button-bg: #5A5A5A;
+    --button-hover-bg: #404040;
+    --link-color: #5A5A5A;
+    --error-color: #E63946;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.reg-title {
+    margin: 0 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 2px rgba(90, 90, 90, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 16px;
+    background: var(--button-bg);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: var(--button-hover-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+a {
+    font-size: 14px;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--button-bg);
+}
+
+p.msg {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--error-color);
+}
+
+p .highlight {
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -12,7 +12,7 @@ def download_youtube_as_mp3(url, output_path='.'):
     """
     try:
         print("Подключение к YouTube...")
-        yt = YouTube("https://youtube.com/watch?v=1FD4zbFbzMQ")
+        yt = YouTube(url)
         
         # Получение аудиопотока самого высокого качества
         video = yt.streams.filter(only_audio=True).first()
