@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fakeey | Login</title>
-    <style>
-        body {
-            background-color: #313131;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img>
+    <div class="header">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-chat-icon-svg-png-download-2598238.png" height="30px" alt="Logo">
+        <h1 class="logo-text">Fakeey | Login</h1>
+    </div>
     
+    <main class="container">
+        <div class="card">
+            <div id="login-block">
+                <input id="email" type="email" placeholder="Email" />
+                <input id="password" type="password" placeholder="Password" />
+                <button id="send-login">Continue</button>
+                <p id="login-msg" class="msg"></p>
+                <br>
+                <a href="https://fakeey124.github.io/login">I already have an account!</a>
+            </div>
+            
+            <div id="otp-block" class="hidden">
+                <p>Code sent to <span id="sent-email" class="highlight"></span></p>
+                <input id="otp" type="text" placeholder="Code from email" />
+                <button id="verify-otp">Confirm</button>
+                <p id="verify-msg" class="msg"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="reg.js"></script>
 </body>
 </html>
